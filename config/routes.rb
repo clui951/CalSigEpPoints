@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get 'rushnames', to: 'rushnames#index'
   get 'rushnames/new', to: 'rushnames#new'
+  get 'rushnames/:id', to: 'rushnames#show', as: :rushname
   post 'rushnames', to: 'rushnames#create'
 
 end

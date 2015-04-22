@@ -1,0 +1,6 @@
+<h1>Submitted Rush Names</h1>
+<% @rushnames.each do |u| %> <!-- Iterates through each name under the variable u -->
+  Name: <p> <%= link_to u.name, rushnames_path(u) %> </p> <!-- Show the name-->
+  Email: <p> <%= u.email %> </p> <!-- Show the rush guy's email -->
+<% end %>
+<%= link_to "new", rushnames_new_path %> <!-- Create a link that appears as "new" that leads to rushnames_new_path -->
