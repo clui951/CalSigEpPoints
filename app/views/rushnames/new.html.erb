@@ -1,0 +1,10 @@
+<h1> Submit a Rush Name: </h1>
+
+<%= form_for @rushname do |f| %> <!-- Create form for rushname object -->
+  Name: <%= f.text_field :name %> <!-- Create a text field that sends its value under the key name-->
+  Photo URL: <%= f.text_field :photo %> <!-- Create a text field that sends its value under the key age -->
+  Phone: <%= f.text_field :phone %>
+  Email: <%= f.text_field :email %>
+  Description: <%= f.text_field :description %>
+  <%= f.submit %> <!-- Create submit button-->
+<% end %>

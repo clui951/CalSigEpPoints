@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150422060629) do
+=======
+ActiveRecord::Schema.define(version: 20150422061239) do
+
+  create_table "rushnames", force: true do |t|
+    t.string   "name"
+    t.string   "photo"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+>>>>>>> 05c70274de2d3f4b1daf472e5935e0fd96e3d45b
 
   create_table "tasks", force: true do |t|
     t.text     "title"

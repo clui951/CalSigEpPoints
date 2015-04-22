@@ -44,3 +44,4 @@ gem "omniauth-google-oauth2", "~> 0.2.1"
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem "font-awesome-rails"
