@@ -216,7 +216,7 @@ header .header-content-new {
     width: 40%;
     padding: 100px 15px;
     text-align: center;
-    margin: 50px;
+    margin: 0px auto;
     background-color: #ffffff;
     opacity:0.8;
     background-position: center;
@@ -528,4 +528,8 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+new label {
+
 }
