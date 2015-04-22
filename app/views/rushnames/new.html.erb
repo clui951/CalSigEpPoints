@@ -1,10 +1,18 @@
-<h1> Submit a Rush Name: </h1>
+<header>
+    <div class="header-content-new">
+        <div class="header-content-new-inner">
 
-<%= form_for @rushname do |f| %> <!-- Create form for rushname object -->
-  Name: <%= f.text_field :name %> <!-- Create a text field that sends its value under the key name-->
-  Photo URL: <%= f.text_field :photo %> <!-- Create a text field that sends its value under the key age -->
-  Phone: <%= f.text_field :phone %>
-  Email: <%= f.text_field :email %>
-  Description: <%= f.text_field :description %>
-  <%= f.submit %> <!-- Create submit button-->
-<% end %>
+            <p><h1> Submit a Rush Name: </h1></p>
+
+			<%= form_for @rushname, html: {class: "new"} do |f| %> <!-- Create form for rushname object -->
+		  	<p><label for="new">Name:</label><%= f.text_field :name %></p> <!-- Create a text field that sends its value under the key name-->
+		  	<p>Photo URL: <%= f.text_field :photo %></p> <!-- Create a text field that sends its value under the key age -->
+		  	<p>Phone: <%= f.text_field :phone %></p>
+		  	<p>Email: <%= f.text_field :email %></p>
+		  	<p>Description: <%= f.text_field :description %></p>
+		  	<p><%= f.submit "Submit rush name", :class => "btn btn-primary btn-xl page-scroll"%> </p><!-- Create submit button-->
+		<% end %>
+
+        </div>
+    </div>
+</header>

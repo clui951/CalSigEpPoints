@@ -211,6 +211,37 @@ header .header-content .header-content-inner p {
     color: rgba(255,255,255,.7);
 }
 
+header .header-content-new {
+    position: relative;
+    width: 40%;
+    padding: 100px 15px;
+    text-align: center;
+    margin: 0px auto;
+    background-color: #ffffff;
+    opacity:0.8;
+    background-position: center;
+}
+
+header .header-content-new .header-content-new-inner h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000000;
+}
+
+header .header-content-new .header-content-new-inner hr {
+    margin: 30px auto;
+}
+
+header .header-content-new .header-content-new-inner p {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+}
+
 @media(min-width:768px) {
     header {
         min-height: 100%;
@@ -232,6 +263,30 @@ header .header-content .header-content-inner p {
     }
 
     header .header-content .header-content-inner p {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
+        font-size: 18px;
+    }
+
+    header .header-content-new {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        right: 20%;
+        padding: 0 0px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    header .header-content-new .header-content-new-inner {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1000px;
+    }
+
+    header .header-content-new .header-content-new-inner p {
         margin-right: auto;
         margin-left: auto;
         max-width: 80%;
@@ -473,4 +528,8 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+new label {
+
 }
