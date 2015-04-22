@@ -24,7 +24,7 @@ class RushnamesController < ApplicationController
   private
 
   def rushname_params
-    params.require(:rushname).permit(:name, :photo, :phone, :email, :description)
+    params.require(:rushname).permit(:name)
   end
 
 end
