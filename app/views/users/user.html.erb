@@ -1,5 +1,7 @@
+<header>
 <% if current_user %>
-	<h1> <%= current_user.name %>'s Profile Page </h1>
+	<p> <%= current_user.name %>'s Profile Page </p>
 <% else %>
-	<h1> Please Sign In For Profile Page </h1>
+	<p> Please Sign In For Profile Page </p>
 <% end %>
+</header>

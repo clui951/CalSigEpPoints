@@ -45,3 +45,4 @@ gem "omniauth-google-oauth2", "~> 0.2.1"
 # gem 'debugger', group: [:development, :test]
 
 gem "font-awesome-rails"
+gem "bootstrap-sass"

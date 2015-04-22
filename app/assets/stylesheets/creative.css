@@ -531,5 +531,10 @@ body {
 }
 
 .new label {
-    float: left;
+    float: center;
+}
+
+.new1 {
+    width: 100%;
+    text-align: left;
 }
