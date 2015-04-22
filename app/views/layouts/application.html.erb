@@ -56,24 +56,24 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                    	<%= button_to "New Task", tasks_new_path, :method => :get, :class => "nav navbar-nav navbar-right" %>
-                    </li>
-                    <li>
-                    	<%= button_to "Rush Name", rushnames_new_path, :method => :get, :class => "nav navbar-nav navbar-right" %>
-                    </li>
-                    <li>
-                    	<% if current_user %>
-							<%= link_to current_user.name, user_path %>
-						<% end %>
-                    </li>
-                    <li>
-                    	<% if current_user %>
-							<%= link_to "Sign out", signout_path, id: "sign_out" %>
-						<% else %>
-							<%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
-						<% end %>
-                    </li>
+                	<% if current_user %>
+                		<li>
+		                	<%= link_to current_user.name, user_path%>
+		                </li>
+	                    <li>
+	                    	<%= link_to "New Task", tasks_new_path, :method => :get%>
+	                    </li>
+	                    <li>
+	                    	<%= link_to "Rush Name", rushnames_new_path, :method => :get%>
+	                    </li>
+	                    <li>
+	                    	<%= link_to "Sign out", signout_path, id: "sign_out"%>
+	                    </li>
+	                <% else %>
+	                	<li>
+	                		<%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+	                	</li>
+                	<% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

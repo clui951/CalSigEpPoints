@@ -530,6 +530,6 @@ body {
     webkit-tap-highlight-color: #222;
 }
 
-new label {
-
+.new label {
+    float: left;
 }
