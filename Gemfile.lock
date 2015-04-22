@@ -46,14 +46,11 @@ GEM
     coffee-script-source (1.9.1.1)
     erubis (2.7.0)
     execjs (2.5.2)
-<<<<<<< HEAD
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    hashie (3.4.1)
-=======
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
->>>>>>> 05c70274de2d3f4b1daf472e5935e0fd96e3d45b
+    hashie (3.4.1)
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (2.2.13)
