@@ -9,6 +9,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  task_type  :string(255)
+#  user_id    :integer
 #
 
 require 'test_helper'
