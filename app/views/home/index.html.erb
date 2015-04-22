@@ -3,6 +3,14 @@
 
 <head>
 
+
+ <!-- PLEASE INSERT ME 
+                        <% if current_user %>
+                            <%= current_user.name %>
+                        <% end %>
+-->
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -122,6 +130,12 @@
 
 <%= button_to "Submit a new task!", tasks_new_path, :class => "button medium", :method => :get %>
 <%= button_to "Submit a rush name!", rushnames_new_path, :class => "button medium", :method => :get %>
+<% if current_user %>
+	Signed in as <strong><%= current_user.name %></strong>!
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+<% else %>
+    <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+<% end %>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

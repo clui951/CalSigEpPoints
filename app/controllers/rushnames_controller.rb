@@ -17,6 +17,10 @@ class RushnamesController < ApplicationController
     end
   end
 
+  def show
+    @rushname = Rushname.find(params[:id])
+  end
+
   private
 
   def rushname_params

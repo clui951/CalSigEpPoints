@@ -29,6 +29,9 @@ gem 'spring',        group: :development
 # annotate gem from github; used to schema comment models
 gem 'annotate', github: 'ctran/annotate_models'
 
+# google authentication
+gem "omniauth-google-oauth2", "~> 0.2.1"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
