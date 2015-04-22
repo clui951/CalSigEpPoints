@@ -14,6 +14,8 @@
 
 class User < ActiveRecord::Base
 
+  has_many :tasks
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
       user.provider = auth.provider
