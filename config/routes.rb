@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   resource :home, only: [:show]
 
   root to: "home#index"
-  get 'users', to:'users#users'
+  get 'user', to:'users#user'
+  get 'user/tasks', to:'users#usertasks'
   get 'tasks/new', to:'tasks#new'
 
   get 'rushnames', to: 'rushnames#index'

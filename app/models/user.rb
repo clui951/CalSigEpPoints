@@ -25,7 +25,5 @@ class User < ActiveRecord::Base
     end
   end
 
-  def users
-  end
 
 end
