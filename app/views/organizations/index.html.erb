@@ -1,0 +1,5 @@
+<h1>Organizations</h1>
+<% @organizations.each do |u| %> <!-- Iterates through each name under the variable u -->
+  Organization Name: <p> <%= link_to u.organization, organizations_path(u) %> </p> <!-- Show the name-->
+<% end %>
+<%= link_to "new", organizations_new_path %> <!-- Create a link that appears as "new" that leads to organizations_new_path -->

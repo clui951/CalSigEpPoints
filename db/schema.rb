@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422101334) do
+ActiveRecord::Schema.define(version: 20150423233215) do
+
+  create_table "organizations", force: true do |t|
+    t.string   "organization"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "rushnames", force: true do |t|
     t.string   "name"
@@ -41,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150422101334) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "organization"
   end
 
 end

@@ -4,6 +4,15 @@
         	<p></p>
         	<h1> Submit a Task</h1>
         	<p></p>
+
+			<%= form_for @task, html: {class: "new"} do |f| %> <!-- Create form for rushname object -->
+			  	<p><label for="new">Title: </label><%= f.text_field :title, :class => "new1" %></p> <!-- Create a text field that sends its value under the key name-->
+			  	<p><label for="new">Comment: </label><%= f.text_field :comment, :class => "new1" %></p> <!-- Create a text field that sends its value under the key age -->
+			  	<p><label for="new">Value: </label><%= f.text_field :value, :class => "new1" %></p>
+			  	<%= f.submit "Submit task", :class => "btn btn-primary btn-xl page-scroll"%><!-- Create submit button-->
+			  	<p></p>
+			<% end %>
+
         </div>
     </div>
 </header>
