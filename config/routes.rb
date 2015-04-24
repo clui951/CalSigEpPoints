@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
 
   # get 'auth/:provider', to: 'sessions#create'
-  get 'auth/:provider/callback', to: 'sessions#create' 
+  get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
@@ -32,6 +32,11 @@ Rails.application.routes.draw do
   get 'rushnames/new', to: 'rushnames#new'
   get 'rushnames/:id', to: 'rushnames#show', as: :rushname
   post 'rushnames', to: 'rushnames#create'
+
+  get 'reimbursements', to: 'reimbursements#index'
+  get 'reimbursements/new', to: 'reimbursements#new'
+  get 'reimbursements/:id', to: 'reimbursements#show', as: :reimbursement
+  post 'reimbursements', to: 'reimbursements#create'
 
   get 'organizations', to: 'organizations#index'
   get 'organizations/new', to: 'organizations#new'
