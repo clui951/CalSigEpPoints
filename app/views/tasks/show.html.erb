@@ -5,6 +5,12 @@
         	<h1>Task <%= @task.id %> </h1>
         	<p></p>
         	<p><%= @task.title %></p>
+					<p><%= @task.comment %></p>
+					<p><%= @task.value %></p>
+
+					<hr>
+		      <%= link_to "Back to All Tasks", tasks_path, :class => "btn btn-primary btn-xl page-scroll" %> <!-- Create a link that appears as "new" that leads to rushnames_new_path -->
+		      <hr>
         </div>
     </div>
 </header>

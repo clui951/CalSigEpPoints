@@ -9,6 +9,10 @@
         	<p><%= @rushname.email %></p>
         	<p><%= @rushname.phone %></p>
         	<p><%= @rushname.description %></p>
+
+					<hr>
+		      <%= link_to "Back to All Rush Names", rushnames_path, :class => "btn btn-primary btn-xl page-scroll" %> <!-- Create a link that appears as "new" that leads to rushnames_new_path -->
+		      <hr>
         </div>
     </div>
 </header>
