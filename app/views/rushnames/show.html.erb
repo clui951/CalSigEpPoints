@@ -6,9 +6,9 @@
         	<p></p>
         	<p><%= @rushname.name %></p>
         	<p><%= image_tag @rushname.photo_url, :size => "260x180", :crop => :fill%></p>
-        	<p>Email: <%= @rushname.email %></p>
-        	<p>Phone: <%= @rushname.phone %></p>
-        	<p>Description: <%= @rushname.description %></p>
+        	<p>Email: <%= @rushname.email %><br>
+        	Phone: <%= @rushname.phone %><br>
+        	Description: <%= @rushname.description %></p>
 					<hr>
 		      <%= link_to "Back to Rush Names", rushnames_path, :class => "btn btn-primary btn-xl page-scroll" %> <!-- Create a link that appears as "new" that leads to rushnames_new_path -->
 		      <hr>
