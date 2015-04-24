@@ -2,7 +2,7 @@
 	<div class="header-content-new">
         <div class="header-content-new-inner">
         <p></p>
-				
+
 			<% if current_user %>
 				<h1> <%= current_user.name %>'s Profile Page </h1>
 			<% else %>
@@ -11,13 +11,13 @@
 			<hr>
 
 			<% if current_user %>
-				<p><%= link_to "Your Tasks", tasks_path %></p>
+				<p><%= link_to "Your Tasks", tasks_path, :class => "btn btn-primary btn-xl page-scroll" %></p>
 			<% else %>
 				<p> Please Sign In To View Your Tasks </p>
 			<% end %>
 
 			<% if current_user %>
-				<p><%= link_to "Your Reimbursements", reimbursements_path %></p>
+				<p><%= link_to "Your Reimbursements", reimbursements_path, :class => "btn btn-primary btn-xl page-scroll" %></p>
 			<% else %>
 				<p> Please Sign In To View Your Reimbursements </p>
 			<% end %>
