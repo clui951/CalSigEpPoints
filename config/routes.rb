@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  get 'organizations/new'
 
-  get 'organizations/create'
-
-  get 'organizations/show'
-
-  get 'organizations/index'
   get 'sessions/create'
 
   get 'sessions/destroy'
@@ -41,10 +35,25 @@ Rails.application.routes.draw do
   get 'organizations', to: 'organizations#index'
   get 'organizations/new', to: 'organizations#new'
   get 'organizations/:id', to: 'organizations#show', as: :organization
-  post 'organizations/index', to: 'organizations#create'
+  post 'organizations', to: 'organizations#create'
 
 
 end
 
 
 # rails g model Task title:text comment:text value:integer
+  # get 'organization/new'
+
+  # get 'organization/create'
+
+  # get 'organization/index'
+
+  # get 'organization/show'
+
+  # get 'organizations/new'
+
+  # get 'organizations/create'
+
+  # get 'organizations/show'
+
+  # get 'organizations/index'

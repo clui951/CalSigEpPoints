@@ -125,6 +125,7 @@ aside {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
         background-color: transparent;
+        opacity: 10%;
     }
 
     .navbar-default .navbar-header .navbar-brand {
