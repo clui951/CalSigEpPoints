@@ -1,18 +1,16 @@
 <header>
 	<div class="header-content-new">
 		<div class="header-content-new-inner">
+		<p></p>
 			<h1>Submitted Tasks</h1>
-
-			<p><%= link_to "Enter New Task", tasks_new_path %></p> <!-- Create a link that appears as "new" that leads to tasks_new_path -->
-			<% @tasks.each do |u| %> <!-- Iterates through each name under the variable u -->
-			  Title: <p> <%= link_to u.title, tasks_path(u) %> </p> <!-- Show the name-->
-			  Comment: <p> <%= u.comment %> </p> <!-- Show the rush guy's email -->
-			  Value: <p> <%= u.value %> </p>
-			<% end %>
 			<hr>
-			
+			<p><%= link_to "Enter New Task", tasks_new_path, :class => "btn btn-primary btn-xl page-scroll" %></p> <!-- Create a link that appears as "new" that leads to tasks_new_path -->
+			<hr>
+			<% @tasks.each do |u| %> <!-- Iterates through each name under the variable u -->
+			  <p>Title: <%= link_to u.title, task_path(u) %>, Comment: <%= u.comment %>, Value: <%= u.value %> </p> <!-- Show the name-->
+			<% end %>
 		</div>
 	</div>
 </header>
 
-		
+
