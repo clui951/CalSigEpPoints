@@ -5,6 +5,8 @@ class TasksController < ApplicationController
 
 	def new
 		@task = Task.new
+		tasks = {"Gym for an hour" => 15, "Do the dishes" => 16}
+		@all_tasks = tasks.keys
 	end
 
 	def create
