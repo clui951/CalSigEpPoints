@@ -2,17 +2,26 @@
 	<div class="header-content-new">
         <div class="header-content-new-inner">
         <p></p>
+				
 			<% if current_user %>
 				<h1> <%= current_user.name %>'s Profile Page </h1>
 			<% else %>
 				<h1> Please Sign In For Profile Page </h1>
 			<% end %>
 			<hr>
+
 			<% if current_user %>
 				<p><%= link_to "Your Tasks", tasks_path %></p>
 			<% else %>
 				<p> Please Sign In To View Your Tasks </p>
 			<% end %>
+
+			<% if current_user %>
+				<p><%= link_to "Your Reimbursements", reimbursements_path %></p>
+			<% else %>
+				<p> Please Sign In To View Your Reimbursements </p>
+			<% end %>
+
 		</div>
 	</div>
 </header>

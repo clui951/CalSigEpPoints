@@ -1,6 +1,6 @@
 class OrganizationsController < ApplicationController
   def index
-		@organizations = Organizations.all
+		@organization = current_user.find(params[:organization])
 	end
 
 	def new
