@@ -8,6 +8,30 @@
 			<% @members.each do |m| %>
 				<p><%=m.name%></p>
 			<% end %>
+
+			<% if @reimbursements %>
+		      	<table border="1" style="width:80%">
+		        	<tr>
+			          	<th>Item</th>
+			          	<th>Date</th>
+			          	<th>Cost</th>
+			          	<th>VP</th>
+		        	</tr>
+		     	<% @reimbursements.each do |u| %> <!-- Iterates through each item under the variable u -->
+		        	<tr>
+			          	<td><%= link_to u.item, reimbursement_path(u) %></td>
+			          	<td><%= u.date %></td>
+			          	<td><%= u.cost %></td>
+			          	<td><%= u.VP %></td>
+		        	</tr>
+		      	<% end %>
+		      	</table>
+				<p>Members:</p>
+				<% @members.each do |m| %>
+					<p><%=m.name%></p>
+				<% end %>
+			<% end %>
+
 		</div>
 	</div>
 

@@ -2,6 +2,7 @@ class OrganizationsController < ApplicationController
   def index
     @organization = Organization.find(current_user.organization)
     @members = User.where(organization: @organization.id).find_each
+    @reiumbursements = Reimbursement.where(organization: @organization.id).find_each
   end
 
   def new
