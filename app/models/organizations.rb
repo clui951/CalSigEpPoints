@@ -11,4 +11,5 @@
 class Organizations < ActiveRecord::Base
 	has_many :users
 	has_many :rushnames
+	has_many :reiumbursements
 end

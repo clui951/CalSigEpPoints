@@ -13,7 +13,7 @@
 #
 
 class Task < ActiveRecord::Base
-	belongs_to :user
+	belongs_to :user 
 end
 
 # Task.where(:user => user1) 		get all tasks under user1
