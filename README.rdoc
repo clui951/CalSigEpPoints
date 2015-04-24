@@ -1,8 +1,8 @@
-# README
+= README
 
 Online point system to allow individuals of an organization to track their achievements and contributions.
 
-## Models and Description:
+== Models and Description:
 Organization
 - has_many users
 Users
@@ -22,7 +22,7 @@ Rush Names
 - Users upload a photo of the rushee
 - Everyone can see all submitted rush names
 
-## Features:
+== Features:
 - Users can login via Google credentials
 - Users can keep track of their tasks and gain points
 - Point leaderboard
@@ -30,7 +30,7 @@ Rush Names
 - Admins can see all reimbursements and delete reimbursements
 - Users can submit rush names, everyone can see rush names
 
-## Division of Labor:
+== Division of Labor:
 - Calvin: Google login, users
 - Mei: homepage, styling
 - Claire: reimbursements, rush names
