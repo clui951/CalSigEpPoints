@@ -1,8 +1,15 @@
-<h1>Submitted Reimbursements</h1>
-<% @reimbursements.each do |u| %> <!-- Iterates through each name under the variable u -->
-  Item: <p> <%= link_to u.item, reimbursements_path(u) %> </p> <!-- Show the name-->
-  Date: <p> <%= u.date %> </p> <!-- Show the rush guy's email -->
-  Cost: <p> <%= u.cost %> </p>
-  VP: <p> <%= u.VP %> </p>
-<% end %>
-<%= link_to "new", reimbursements_new_path %> <!-- Create a link that appears as "new" that leads to rushnames_new_path -->
+<header>
+	<div class="header-content-new">
+		<div class="header-content-new-inner">
+      <h1>Submitted Reimbursements</h1>
+      <% @reimbursements.each do |u| %> <!-- Iterates through each item under the variable u -->
+        Item: <p> <%= link_to u.item, reimbursements_path(u) %> </p> <!-- Show the item-->
+        Date: <p> <%= u.date %> </p> <!-- Show the datel -->
+        Cost: <p> <%= u.cost %> </p>
+        VP: <p> <%= u.VP %> </p>
+      <% end %>
+      <hr>
+      <%= link_to "Enter New Reimbursement", reimbursements_new_path %> <!-- Create a link that appears as "new" that leads to rushnames_new_path -->
+    </div>
+  </div>
+</header>
