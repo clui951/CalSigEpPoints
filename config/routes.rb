@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   get 'organizations', to: 'organizations#index'
   get 'organizations/new', to: 'organizations#new'
   get 'organizations/:id', to: 'organizations#show', as: :organization
-  post 'organizations', to: 'organizations#create'
+  post 'organizations/index', to: 'organizations#create'
 
 end
 
