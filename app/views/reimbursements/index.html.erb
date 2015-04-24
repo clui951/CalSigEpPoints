@@ -15,7 +15,7 @@
         </tr>
       <% @reimbursements.each do |u| %> <!-- Iterates through each item under the variable u -->
         <tr>
-          <td><%= link_to u.item, reimbursements_path(u) %></td>
+          <td><%= link_to u.item, reimbursement_path(u) %></td>
           <td><%= u.date %></td>
           <td><%= u.cost %></td>
           <td><%= u.VP %></td>
