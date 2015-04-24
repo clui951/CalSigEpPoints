@@ -5,7 +5,7 @@
         	<h1>Rushee <%= @rushname.id %> </h1>
         	<p></p>
         	<p><%= @rushname.name %></p>
-        	<p><%= @rushname.photo %></p>
+        	<p><%= image_tag @rushname.photo_url, :size => "260x180", :crop => :fill%></p>
         	<p>Email: <%= @rushname.email %></p>
         	<p>Phone: <%= @rushname.phone %></p>
         	<p>Description: <%= @rushname.description %></p>

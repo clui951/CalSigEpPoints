@@ -25,4 +25,12 @@ class RushnamesController < ApplicationController
   def rushname_params
     params.require(:rushname).permit(:name, :photo, :phone, :email, :description)
   end
+
+  def upload
+  uploaded_io = params[:name][:photo]
+  File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+    file.write(uploaded_io.read)
+  end
+end
+
 end
