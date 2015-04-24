@@ -10,6 +10,9 @@ class OrganizationsController < ApplicationController
 		end
 	end
 
+	def joinexisting
+	end
+
 	def create
 		@organization = Organization.new(organization_params)
 		# @organization.name = organization_params[:name]
