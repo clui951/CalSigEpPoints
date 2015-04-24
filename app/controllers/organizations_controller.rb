@@ -5,10 +5,14 @@ class OrganizationsController < ApplicationController
 
 	def new
 		@organization = Organizations.new
+		if not current_user
+			redirect_to '/auth/google_oauth2'
+		end
 	end
 
 	def create
-		@organization = Organizations.create(organization_params)
+		@organization = Organizations.new(organization_params)
+		# @organization.name = organization_params[:name]
 		if @organization.save
 			redirect_to @organization
 		else
@@ -23,6 +27,6 @@ class OrganizationsController < ApplicationController
 	private
 
 	def organization_params
-		params.require(:organizations).permit(:title, :comment, :value)
+		params.require(:organizations).permit(:name)
 	end
 end

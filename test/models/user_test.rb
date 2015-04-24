@@ -10,6 +10,7 @@
 #  oauth_expires_at :datetime
 #  created_at       :datetime
 #  updated_at       :datetime
+#  organization     :string(255)
 #
 
 require 'test_helper'
