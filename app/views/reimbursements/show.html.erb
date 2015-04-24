@@ -5,6 +5,13 @@
         	<h1>Reimbursement <%= @reimbursement.id %> </h1>
         	<p></p>
         	<p><%= @reimbursement.item %></p>
+					<p><%= @reimbursement.date %></p>
+					<p><%= @reimbursement.cost %></p>
+					<p><%= @reimbursement.VP%></p>
+
+					<hr>
+		      <%= link_to "Back to All Reimbursements", reimbursements_path, :class => "btn btn-primary btn-xl page-scroll" %> <!-- Create a link that appears as "new" that leads to rushnames_new_path -->
+		      <hr>
         </div>
     </div>
 </header>
