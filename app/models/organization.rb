@@ -8,10 +8,8 @@
 #  updated_at :datetime
 #
 
-require 'test_helper'
-
-class OrganizationsTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class Organization < ActiveRecord::Base
+	has_many :users
+	has_many :rushnames
+	has_many :reiumbursements
 end
