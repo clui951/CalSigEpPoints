@@ -4,10 +4,22 @@
         	<p></p>
         	<h1>Reimbursement <%= @reimbursement.id %> </h1>
         	<p></p>
-        	<p><%= @reimbursement.item %></p>
-			<p><%= @reimbursement.date %></p>
-			<p><%= @reimbursement.cost %></p>
-			<p><%= @reimbursement.VP%></p>
+
+					<table border="1" style="width:80%">
+		        <tr>
+		          <th>Item</th>
+		          <th>Date</th>
+		          <th>Cost</th>
+		          <th>VP</th>
+		        </tr>
+
+						<tr>
+		          <td><%= @reimbursement.item %></td>
+		          <td><%= @reimbursement.date %></td>
+		          <td><%= @reimbursement.cost %></td>
+		          <td><%= @reimbursement.VP %></td>
+		        </tr>
+      </table>
 
 			<hr>
 		      <%= link_to "Back to Reimbursements", reimbursements_path, :class => "btn btn-primary btn-xl page-scroll" %> <!-- Create a link that appears as "new" that leads to rushnames_new_path -->

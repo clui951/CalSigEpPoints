@@ -4,9 +4,21 @@
         	<p></p>
         	<h1>Task <%= @task.id %> </h1>
         	<p></p>
-        	<p><%= @task.title %></p>
-			<p><%= @task.comment %></p>
-			<p><%= @task.value %></p>
+
+					<table border="1" style="width:80%">
+			        <tr>
+			          <th>Title</th>
+			          <th>Comment</th>
+			          <th>Value</th>
+			        </tr>
+
+							<tr>
+			          <td><%= @task.title %></td>
+			          <td><%= @task.comment %></td>
+			          <td><%= @task.value %></td>
+			        </tr>
+						</table>
+
 			<hr>
 		      <%= link_to "Back to Tasks", tasks_path, :class => "btn btn-primary btn-xl page-scroll" %> <!-- Create a link that appears as "new" that leads to rushnames_new_path -->
 		      <hr>
