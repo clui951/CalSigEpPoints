@@ -6,10 +6,23 @@
         	<hr>
         	<%= link_to "New Rush Name", rushnames_new_path, :class => "btn btn-primary btn-xl page-scroll" %> <!-- Create a link that appears as "new" that leads to rushnames_new_path -->
         	<hr>
-			<% @rushnames.each do |u| %> <!-- Iterates through each name under the variable u -->
-			  <p> Name: <%= link_to u.name, rushname_path(u) %>, Email: <%= u.email %></p> <!-- Show the name-->
-			<% end %>
+
+        	<table border="1" style="width:80%">
+	        <tr>
+	          <th>Name</th>
+	          <th>Email</th>
+	        </tr>
+	      	<% @rushnames.each do |u| %> <!-- Iterates through each name under the variable u -->
+	        <tr>
+	          <td><%= link_to u.name, rushname_path(u) %></td>
+	          <td><%= u.email %></td>
+	        </tr>
+	      <% end %>
+	      </table>
 			<p></p>
         </div>
     </div>
 </header>
+
+
+<hr>
