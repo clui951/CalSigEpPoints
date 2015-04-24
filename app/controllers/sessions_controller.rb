@@ -4,9 +4,10 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
     flash[:notif] = "Signed In!"
     if not current_user.organization
-      # redirect_to organization_new_path
+      redirect_to 'organization/new'
+    else 
+      redirect_to root_path, :notice => "Signed In!"
     end
-    redirect_to root_path, :notice => "Signed In!"
   end
 
   def destroy
