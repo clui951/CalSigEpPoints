@@ -58,16 +58,10 @@
                 <ul class="nav navbar-nav navbar-right">
                 	<% if current_user %>
                 		<li>
-		                	<%= link_to current_user.name, user_path%>
+		                	<%= link_to "My Profile", user_path %>
 		                </li>
 	                    <li>
-	                    	<%= link_to "New Task", tasks_new_path, :method => :get%>
-	                    </li>
-	                    <li>
-	                    	<%= link_to "Rush Name", rushnames_new_path, :method => :get%>
-	                    </li>
-	                    <li>
-	                    	<%= link_to "Sign out", signout_path, id: "sign_out"%>
+	                    	My Org
 	                    </li>
 	                <% else %>
 	                	<li>
