@@ -1,6 +1,8 @@
 = README
 <b>Title:</b> Frat Track
+
 <b>Team Members:</b> Calvin Lui, Mei Wan, Claire Lee, Stevie Kobori
+
 <b>Idea:</b> Online point system to allow individuals of an organization to track their achievements and contributions.
 
 == Models and Description:
