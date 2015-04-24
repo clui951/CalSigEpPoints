@@ -20,6 +20,8 @@ class OrganizationsController < ApplicationController
 		@organization = Organizations.find(params[:id])
 	end
 
+	private
+
 	def organization_params
 		params.require(:organizations).permit(:title, :comment, :value)
 	end

@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get 'organizations/show'
 
   get 'organizations/index'
-
   get 'sessions/create'
 
   get 'sessions/destroy'
@@ -22,8 +21,9 @@ Rails.application.routes.draw do
 
   root to: "home#index"
   get 'user', to:'users#user'
-  get 'tasks', to: 'tasks#index'
   get 'user/tasks', to:'users#usertasks'
+
+  get 'tasks', to: 'tasks#index'
   get 'tasks/new', to:'tasks#new'
   get 'tasks/:id', to: 'tasks#show', as: :task
   post 'tasks', to: 'tasks#create'

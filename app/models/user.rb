@@ -13,9 +13,6 @@
 #
 
 class User < ActiveRecord::Base
-  has_many :tasks, :rushnames
-  belongs_to :organization
-
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
       user.provider = auth.provider
@@ -26,4 +23,6 @@ class User < ActiveRecord::Base
       user.save!
     end
   end
+  has_many :tasks
+  belongs_to :organizations
 end

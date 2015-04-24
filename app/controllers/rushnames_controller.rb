@@ -1,5 +1,4 @@
 class RushnamesController < ApplicationController
-
   def index
     @rushnames = Rushname.all
   end

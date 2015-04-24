@@ -20,6 +20,8 @@ class TasksController < ApplicationController
 		@task = Task.find(params[:id])
 	end
 
+	private
+
 	def task_params
 		params.require(:task).permit(:title, :comment, :value)
 	end

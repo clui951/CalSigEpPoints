@@ -18,5 +18,5 @@ class Rushname < ActiveRecord::Base
   validates :email, presence: true
   validates :phone, presence: true
   validates :description, presence: true
-  belongs_to :user
+  belongs_to :organizations
 end
