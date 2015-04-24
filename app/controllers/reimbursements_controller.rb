@@ -11,7 +11,7 @@ class ReimbursementsController < ApplicationController
 	def create
 		@reimbursement = Reimbursement.create(reimbursement_params)
 		if @reimbursement.save
-			redirect_to reimbursements_new_path
+			redirect_to @reimbursement
 		else
 			render "new"
 		end
@@ -26,5 +26,5 @@ class ReimbursementsController < ApplicationController
 	def reimbursement_params
 		params.require(:reimbursement).permit(:item, :date, :cost, :VP)
 	end
-	
+
 end
