@@ -2,11 +2,12 @@
 	<div class="header-content-new">
         <div class="header-content-new-inner">
         <p></p>
-			<h1>Organizations</h1>
-			<% @organizations.each do |u| %> <!-- Iterates through each name under the variable u -->
-			  Organization Name: <p> <%= link_to u.organization, organization_path(u) %> </p> <!-- Show the name-->
+			<h1><%=@organization.name %></h1>
+			<br>
+			<p>Members:</p>
+			<% @members.each do |m| %>
+				<p><%=m.name%></p>
 			<% end %>
-			<%= link_to "new", organizations_new_path, :class => "btn btn-primary btn-xl page-scroll"%> <!-- Create a link that appears as "new" that leads to organizations_new_path -->
 		</div>
 	</div>
 
