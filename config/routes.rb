@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   get 'organizations/:id', to: 'organizations#show', as: :organization
   post 'organizations/index', to: 'organizations#create'
 
+
 end
 
 
