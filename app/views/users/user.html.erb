@@ -9,7 +9,7 @@
 			<% end %>
 			<hr>
 			<% if current_user %>
-				<p> Your Tasks </p>
+				<p><%= link_to "Your Tasks", tasks_path %></p>
 			<% else %>
 				<p> Please Sign In To View Your Tasks </p>
 			<% end %>
