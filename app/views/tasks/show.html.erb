@@ -5,6 +5,7 @@
         	<h1>Task <%= @task.id %> </h1>
         	<p></p>
         	<p><%= @task.title %></p>
+        	<p><%= link_to "Back to Tasks", tasks_path, :class => "btn btn-primary btn-xl page-scroll" %></p>
         </div>
     </div>
 </header>
