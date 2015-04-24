@@ -5,6 +5,9 @@ class OrganizationsController < ApplicationController
 
 	def new
 		@organization = Organizations.new
+		if not current_user
+			redirect_to '/auth/google_oauth2'
+		end
 	end
 
 	def create
