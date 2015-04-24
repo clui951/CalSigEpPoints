@@ -4,7 +4,7 @@ class OrganizationsController < ApplicationController
 	end
 
 	def new
-		@organization = Organization.new
+		@organization = Organizations.new
 		if not current_user
 			redirect_to '/auth/google_oauth2'
 		end
@@ -14,7 +14,7 @@ class OrganizationsController < ApplicationController
 	end
 
 	def create
-		@organization = Organization.new(organization_params)
+		@organization = Organizations.new(organization_params)
 		# @organization.name = organization_params[:name]
 		if @organization.save
 			redirect_to @organization
@@ -24,7 +24,7 @@ class OrganizationsController < ApplicationController
 	end
 
 	def show
-		@organization = Organization.find(params[:id])
+		@organization = Organizations.find(params[:id])
 	end
 
 	private
