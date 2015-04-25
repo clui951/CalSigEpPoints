@@ -30,6 +30,9 @@ class OrganizationsController < ApplicationController
     @organization = Organization.find(params[:id])
   end
 
+  def all
+  end
+
   private
 
   def organization_params

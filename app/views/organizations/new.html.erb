@@ -10,7 +10,14 @@
 			  	<%= f.submit "Create organization", :class => "btn btn-primary btn-xl page-scroll"%><!-- Create submit button-->
 			  	<p></p>
 			<% end %>
+            <hr>
+            <%= link_to "Or choose from existing", organizations_all_path %>
 
         </div>
     </div>
 </header>
+
+
+
+
+<%= link_to "Reimbursements", reimbursements_path, :method => :get%>

@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get 'reimbursements/:id', to: 'reimbursements#show', as: :reimbursement
   post 'reimbursements', to: 'reimbursements#create'
 
+  get 'organizations/all', to: 'organizations#all'
   get 'organizations', to: 'organizations#index'
   get 'organizations/new', to: 'organizations#new'
   get 'organizations/:id', to: 'organizations#show', as: :organization
