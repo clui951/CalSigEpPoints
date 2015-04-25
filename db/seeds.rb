@@ -16,6 +16,10 @@ Task.create(title: 'Clean bathroom', comment: 'gross', value: 50)
   Reimbursement.create item: item, date: '4/25/2015', cost: rand(1..20), VP: 'Stevie'
 end
 
+%w(Fraternity Volunteering).each do |name|
+	Organization.create name: name
+end
+
 File.open(File.join(Rails.root, 'bieber.jpg'))
 %w(Andy Ben Connor Dylan).each do |name|
   Rushname.create name: name, photo: open("bieber.jpg"), email: name+"@yahoo.com", phone: "(555) 555-5555", description: "Cool dude!"
