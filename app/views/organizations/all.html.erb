@@ -8,8 +8,9 @@
         		<p> No Organizations Created </p>
         	<% else %>
         		<% Organization.all.each do |u| %>
-        			<%= u.name %> 
-        			<%= link_to "Join", u_path, :class => "btn btn-primary btn-xl page-scroll" %>
+        			<p><font color="black"> <%= u.name %>  </font>
+        			<%= link_to "Join", organization_path(u), :class => "btn btn-primary page-scroll" %> </p>
+        			<p></p>
         		<% end %>
         	<% end %>
 

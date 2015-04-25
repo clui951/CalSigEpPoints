@@ -28,6 +28,10 @@ class OrganizationsController < ApplicationController
 
   def show
     @organization = Organization.find(params[:id])
+    if not current_user.organization 
+      current_user.organization = @organization
+      current_user.save
+    end
   end
 
   def all
