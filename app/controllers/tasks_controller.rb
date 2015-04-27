@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
 	def index
-		@tasks = Task.all
+		@tasks = Task.where( user: current_user)
 	end
 
 	def new
@@ -11,6 +11,7 @@ class TasksController < ApplicationController
 
 	def create
 		@task = Task.create(task_params)
+		@task.user = current_user
 		if @task.save
 			redirect_to @task
 		else

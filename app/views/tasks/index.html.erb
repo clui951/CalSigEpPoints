@@ -6,19 +6,21 @@
 			<hr>
 			<p><%= link_to "New Task", tasks_new_path, :class => "btn btn-primary btn-xl page-scroll" %></p> <!-- Create a link that appears as "new" that leads to tasks_new_path -->
 			<hr>
-			<table border="1" style="width:80%">
-	        <tr>
-	          <th>Title</th>
-	          <th>Comment</th>
-	          <th>Value</th>
-	        </tr>
-	      	<% @tasks.each do |u| %> <!-- Iterates through each name under the variable u -->
-	        <tr>
-	          <td><%= link_to u.title, task_path(u) %></td>
-	          <td><%= u.comment %></td>
-	          <td><%= u.value %></td>
-	        </tr>
-	      <% end %>
+			<% if @tasks %>
+				<table border="1" style="width:80%">
+		        <tr>
+		          <th>Title</th>
+		          <th>Comment</th>
+		          <th>Value</th>
+		        </tr>
+		      		<% @tasks.each do |u| %> <!-- Iterates through each name under the variable u -->
+			        <tr>
+			          <td><%= link_to u.title, task_path(u) %></td>
+			          <td><%= u.comment %></td>
+			          <td><%= u.value %></td>
+			        </tr>
+		      		<% end %>
+		    <% end %>
 	      </table>
 	      <p></p>
 		</div>
