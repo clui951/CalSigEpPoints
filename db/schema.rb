@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150424074324) do
+ActiveRecord::Schema.define(version: 20150427224138) do
 
   create_table "Organization", force: true do |t|
     t.string   "name"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20150424074324) do
     t.string   "VP"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "organization_id"
   end
 
   create_table "rushnames", force: true do |t|
@@ -40,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150424074324) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo"
+    t.integer  "organization_id"
   end
 
   create_table "tasks", force: true do |t|
@@ -60,7 +63,7 @@ ActiveRecord::Schema.define(version: 20150424074324) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "organization"
+    t.integer  "organization_id"
   end
 
 end

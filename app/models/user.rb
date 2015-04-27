@@ -10,7 +10,7 @@
 #  oauth_expires_at :datetime
 #  created_at       :datetime
 #  updated_at       :datetime
-#  organization     :string(255)
+#  organization_id  :integer
 #
 
 class User < ActiveRecord::Base
@@ -25,5 +25,5 @@ class User < ActiveRecord::Base
     end
   end
   has_many :tasks
-  belongs_to :organizations
+  belongs_to :organization
 end

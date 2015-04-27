@@ -2,19 +2,18 @@
 #
 # Table name: tasks
 #
-#  id         :integer          not null, primary key
-#  title      :text
-#  comment    :text
-#  value      :integer
-#  created_at :datetime
-#  updated_at :datetime
-#  task_type  :string(255)
-#  user_id    :integer
+#  id              :integer          not null, primary key
+#  title           :text
+#  comment         :text
+#  value           :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#  task_type       :string(255)
+#  organization_id :integer
 #
 
 class Task < ActiveRecord::Base
 	belongs_to :user 
-	belongs_to :organization
 end
 
 # Task.where(:user => user1) 		get all tasks under user1
