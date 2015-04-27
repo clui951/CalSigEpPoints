@@ -1,6 +1,6 @@
 class RushnamesController < ApplicationController
   def index
-    @rushnames = Rushname.all
+    @rushnames = Rushname.where(organization: current_user.organization)
   end
 
 	def new
@@ -9,6 +9,7 @@ class RushnamesController < ApplicationController
 
   def create
     @rushname = Rushname.create(rushname_params)
+    @rushname.organization = current_user.organization
     if @rushname.save
       redirect_to @rushname
     else
