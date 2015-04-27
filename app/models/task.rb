@@ -14,6 +14,7 @@
 
 class Task < ActiveRecord::Base
 	belongs_to :user 
+	belongs_to :organization
 end
 
 # Task.where(:user => user1) 		get all tasks under user1

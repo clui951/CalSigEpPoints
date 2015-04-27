@@ -1,6 +1,8 @@
 class ReimbursementsController < ApplicationController
 
 	def index
+		org = current_user.organization
+		# @reimbursements = Reimbursement.find_by(organization_id: org)
 		@reimbursements = Reimbursement.all
 	end
 
