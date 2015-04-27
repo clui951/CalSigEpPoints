@@ -6,22 +6,24 @@
       <hr>
       <%= link_to "New Reimbursement", reimbursements_new_path, :class => "btn btn-primary btn-xl page-scroll" %> <!-- Create a link that appears as "new" that leads to rushnames_new_path -->
       <hr>
-      <table border="1" style="width:80%">
-        <tr>
-          <th>Item</th>
-          <th>Date</th>
-          <th>Cost</th>
-          <th>VP</th>
-        </tr>
-      <% @reimbursements.each do |u| %> <!-- Iterates through each item under the variable u -->
-        <tr>
-          <td><%= link_to u.item, reimbursement_path(u) %></td>
-          <td><%= u.date %></td>
-          <td><%= u.cost %></td>
-          <td><%= u.VP %></td>
-        </tr>
+      <% if @reimbursements %>
+        <table border="1" style="width:80%">
+          <tr>
+            <th>Item</th>
+            <th>Date</th>
+            <th>Cost</th>
+            <th>VP</th>
+          </tr>
+        <% @reimbursements.each do |u| %> <!-- Iterates through each item under the variable u -->
+          <tr>
+            <td><%= link_to u.item, reimbursement_path(u) %></td>
+            <td><%= u.date %></td>
+            <td><%= u.cost %></td>
+            <td><%= u.VP %></td>
+          </tr>
+        <% end %>
+        </table>
       <% end %>
-      </table>
       <p></p>
     </div>
   </div>
