@@ -5,7 +5,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
-gem 'pg'
+# gem 'pg'
+group :development do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
 
 
 # Use SCSS for stylesheets
@@ -50,3 +56,7 @@ gem "omniauth-google-oauth2", "~> 0.2.1"
 gem "font-awesome-rails"
 gem "bootstrap-sass"
 gem 'carrierwave'
+
+ruby '2.1.2'
+
+gem 'rails_12factor'
