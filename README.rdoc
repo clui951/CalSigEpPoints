@@ -5,7 +5,7 @@
 
 <b>Idea:</b> Online point system to allow individuals of an organization to track their achievements and contributions.
 
-<b>Demo Link:</b> frattrack.herokuapp.com
+<b>Demo Link:</b> { frattrack.herokuapp.com }[frattrack.herokuapp.com]
 
 == Models and Description:
 Organization
