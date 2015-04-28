@@ -11,8 +11,10 @@ group :development do
 end
 group :production do
   gem 'pg'
+  gem 'thin'
 end
 
+gem 'puma'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
