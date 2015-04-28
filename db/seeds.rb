@@ -6,17 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-organization = Organization.create(name: 'The Rails Train')
+organization = Organization.create( name: 'The Rails Train' )
 
-
-
-
-users = User.create([{ name: 'Calvin', organization: organization }, 
-					{ name: 'Claire', organization: organization }, 
-					{ name: 'Mei', organization: organization }, 
+users = User.create([{ name: 'Calvin', organization: organization },
+					{ name: 'Claire', organization: organization },
+					{ name: 'Mei', organization: organization },
 					{ name: 'Stevie', organization: organization }])
 
-tasks = Task.create([{ title: 'Rode the Rails Train', comment: 'Choo Choo', value: 10, user: users[0] }, 
+tasks = Task.create([{ title: 'Rode the Rails Train', comment: 'Choo Choo', value: 10, user: users[0] },
 			{ title: 'Rode the Rails Train', comment: 'Choo Choo', value: 10, user: users[1] },
 			{ title: 'Rode the Rails Train', comment: 'Choo Choo', value: 10, user: users[2] },
 			{ title: 'Rode the Rails Train', comment: 'Choo Choo', value: 10, user: users[3] },
