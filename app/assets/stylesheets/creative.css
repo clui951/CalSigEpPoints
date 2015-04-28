@@ -212,6 +212,10 @@ header .header-content .header-content-inner p {
     color: rgba(255,255,255,.7);
 }
 
+header .header-content-about {
+  color: #ffffff;
+}
+
 header .header-content-new {
     position: relative;
     width: 40%;

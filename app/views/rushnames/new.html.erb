@@ -7,7 +7,7 @@
 
 			<%= form_for @rushname, html: {class: "new"} do |f| %> <!-- Create form for rushname object -->
 			  	<p><label for="new">Name: </label><%= f.text_field :name, :class => "new1" %></p> <!-- Create a text field that sends its value under the key name-->
-			  	<p><label for="new">Photo: </label><%= f.file_field :photo, :align=> "center", :class => "new1"%></p> <!-- Create a text field that sends its value under the key age -->
+			  	<p><label for="new">Photo: </label><%= f.file_field :photo, :align=> "center", :class => "new1"%></p> 
 			  	<p><label for="new">Phone: </label><%= f.text_field :phone, :class => "new1" %></p>
 			  	<p><label for="new">Email: </label><%= f.text_field :email, :class => "new1" %></p>
 			  	<p><label for="new">Description: </label><%= f.text_field :description, :class => "new1" %></p>
