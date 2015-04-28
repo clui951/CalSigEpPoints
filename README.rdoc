@@ -12,14 +12,12 @@ Users
 - belongs_to an organization
 - log on with Google credentials
 - submits tasks, reimbursements, and rush names
-- certain Users are Administrators and can view everyone’s submissions
 Tasks
 - has a comment and point value
 - belongs to User
 Reimbursements
 - has date, cost, and VP
 - belongs to User
-- Admins can see everything
 Rush Names
 - Has Phone #, Email, Description
 - Users upload a photo of the rushee
@@ -30,7 +28,6 @@ Rush Names
 - Users can keep track of their tasks and gain points
 - Point leaderboard
 - Users can submit reimbursements
-- Admins can see all reimbursements and delete reimbursements
 - Users can submit rush names, everyone can see rush names
 
 == Division of Labor:
